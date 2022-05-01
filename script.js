@@ -1,7 +1,8 @@
 const btn = document.getElementById('create-password');
+const copy = document.getElementById('copy');
+const newPassword = document.getElementById('new-password');
 
 const createRandomPassword = () => {
-  const newPassword = document.getElementById('new-password');
   let chars =
     '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJLMNOPQRSTUVWXYZ!@#$%^&*()+?><:{}[]';
   let passwordLength = 12;
@@ -15,3 +16,9 @@ const createRandomPassword = () => {
 };
 
 btn.addEventListener('click', createRandomPassword);
+
+const copyPassword = () => {
+  navigator.clipboard.writeText(newPassword.innerText);
+};
+
+copy.addEventListener('click', copyPassword);
