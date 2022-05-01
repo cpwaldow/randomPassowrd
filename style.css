@@ -34,3 +34,7 @@ body {
   padding: 25px;
   border-radius: 10px;
 }
+
+#copy, #new-password {
+  display: none;
+}
